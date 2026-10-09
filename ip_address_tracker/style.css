@@ -1,0 +1,7 @@
+@import url('https://googleapis.com');
+@import "tailwindcss";
+
+:root {
+    /* This generates the class: font-rubik */
+    --font-rubik: "Rubik", sans-serif;
+}
