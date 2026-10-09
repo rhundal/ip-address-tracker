@@ -7,7 +7,7 @@
   <!-- displays site properly based on user's device -->
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="style.css">
-
+  <script type="module" src="./dist/index.js" defer></script>
   <title>Frontend Mentor | IP Address Tracker</title>
 
 </head>
@@ -23,8 +23,8 @@
         <form class="flex flex-row" action="" validate>
           <div class="flex flex-row gap-0"> <!-- search component built with tailwind -->
             <input class="rounded-s-2xl w-2xs h-[4rem] md:w-sm md:h-[3rem] bg-white pl-4 pr-4" type="search"
-              id="searchIpAddress" name="searchIpAddress" placeholder="Search for any IP address or domain" required>
-            <button
+              id="searchIpAddress" name="searchIpAddress" placeholder="Search for any IP address or domain">
+            <button id="submitBtn"
               class="bg-black bg-[url('./ui/images/icon-arrow.svg')] bg-center bg-no-repeat text-transparent w-12 h-full rounded-e-2xl"
               type="submit"> submit
             </button>
@@ -41,24 +41,23 @@
           <div class="flex flex-col p-5">
             <div class="ml-2 md:border-b-0 border-t-0 md:border-t-0 md:border-e-2 md:border-gray-200"> IP Address
             </div>
-            <div class="ml-2 md:border-b-0 border-t-0 md:border-t-0 md:border-e-2 md:border-gray-200"> some ip here
+            <div id="displayIP" class="ml-2 md:border-b-0 border-t-0 md:border-t-0 md:border-e-2 md:border-gray-200">
             </div>
           </div>
           <div class="flex flex-col p-5">
             <div class="ml-2 md:border-b-0 border-t-0 md:border-t-0 md:border-e-2 md:border-gray-200"> Location</div>
-            <div class="ml-2 md:border-b-0 border-t-0 md:border-t-0 md:border-e-2 md:border-gray-200"> some location
-              here
-            </div>
+            <div id="displayLocation"
+              class="ml-2 md:border-b-0 border-t-0 md:border-t-0 md:border-e-2 md:border-gray-200"></div>
           </div>
           <div class="flex flex-col p-5">
             <div class="ml-2 md:border-b-0 border-t-0 md:border-t-0 md:border-e-2 md:border-gray-200"> Timezone UTC
             </div>
-            <div class="ml-2 md:border-b-0 border-t-0 md:border-t-0 md:border-e-2 md:border-gray-200">some timezone here
-            </div>
+            <div id="displayTimezone"
+              class="ml-2 md:border-b-0 border-t-0 md:border-t-0 md:border-e-2 md:border-gray-200"></div>
           </div>
           <div class="flex flex-col p-5">
             <div class="ml-2 md:border-b-0 border-t-0 md:border-t-0 md:border-e-0 md:border-gray-200"> ISP</div>
-            <div class="ml-2 md:border-b-0 border-t-0 md:border-t-0 md:border-e-0 md:border-gray-200">some isp here
+            <div id="displayIsp" class="ml-2 md:border-b-0 border-t-0 md:border-t-0 md:border-e-0 md:border-gray-200">
             </div>
           </div>
           <!-- add offset value dynamically using the API -->
