@@ -27,18 +27,15 @@ export const fetchIPDetails = async (
       ? "domain"
       : "ipAddress";
 
-  const url = `https://geo.ipify.org/api/v2/country,city?apiKey=${process.env.IPIFY_API_KEY}&${parameterName}=${encodeURIComponent(searchCriteria ?? "www.gameloft.com")}`;
+  const response = await fetch(
+    `/api/ip-details?${parameterName}=${encodeURIComponent(searchCriteria)}`,
+  );
 
-  console.log("Request URL:", url);
-  const ipDetailsResponse = await fetch(url);
-
-  if (!ipDetailsResponse.ok) {
-    throw new Error("Failed to fetch user details");
+  if (!response.ok) {
+    throw new Error("Failed to fetch IP details");
   }
 
-  const ipDetails: IPObject = await ipDetailsResponse.json();
-
-  console.log(ipDetails);
+  const ipDetails: IPObject = await response.json();
 
   return ipDetails;
 };
