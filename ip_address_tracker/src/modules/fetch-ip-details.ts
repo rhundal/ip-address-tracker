@@ -10,6 +10,8 @@ type LocationData = {
   city: string;
   postalCode?: string;
   timezone: string;
+  lat: number;
+  lng: number;
 };
 
 export const fetchIPDetails = async (

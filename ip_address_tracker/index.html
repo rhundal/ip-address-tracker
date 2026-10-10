@@ -6,6 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@2.0.0-alpha.1/dist/leaflet.css" />
+
+  <script type="importmap">
+{
+  "imports": {
+    "leaflet": "https://cdn.jsdelivr.net/npm/leaflet@2.0.0-alpha.1/dist/leaflet.js"
+  }
+}
+</script>
+
   <link rel="stylesheet" href="style.css">
   <script type="module" src="./dist/index.js" defer></script>
   <title>Frontend Mentor | IP Address Tracker</title>
@@ -33,9 +44,9 @@
       </div>
     </div>
   </header>
-  <main class="bg-transparent -mt-[20%] md:-mt-[3%]">
+  <main class="bg-transparent -mt-[20%] md:-mt-[3%] relative">
     <section> <!-- section containing both the ip info and map-->
-      <section class="flex justify-center">
+      <section class="relative flex justify-center z-20">
         <div
           class="grid grid-rows-4 md:grid-cols-4 gap-0 bg-white min-w-xs md:w-full md:max-w-4xl md:h-40 rounded-2xl p-5 border-2 border-gray-200 text-center md:text-left">
           <div class="flex flex-col p-5">
@@ -63,14 +74,14 @@
           <!-- add offset value dynamically using the API -->
         </div>
       </section>
-      <div>
-        <!-- map show-->
+      <div id="mapArea" class="w-full h-220 -mt-[42%] md:-mt-[8%] relative z-10">
+
       </div>
     </section>
 
   </main>
 
-  <footer class="mt-120 mb-10 w-full grid grid-rows-2 justify-center">
+  <footer class="mt-5 mb-10 w-full grid grid-rows-2 justify-center">
     <div class="text-center"> Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
     </div>
     <div class="text-center"> Coded by Rajdeep Hundal.</div>
