@@ -19,4 +19,4 @@
 
 - cd ip_address_tracker
 - npx tsc
-- right click index.html
+- npx vercel dev
