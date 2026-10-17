@@ -11,6 +11,6 @@
 
 ##### What I did to keep my key private
 
-- I made use of I used Node.js serverless functions on Vercel (middleman) to keep my API key private.
+- I made use of Node.js serverless functions on Vercel (middleman) to keep my API key private.
 
 ##### [Link to my website](https://ip-address-tracker-one-psi.vercel.app/)
