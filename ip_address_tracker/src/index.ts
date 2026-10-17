@@ -83,6 +83,7 @@ function renderIpDetails(ipDetails: IPObject) {
       `City:${cityVar}, Region:${regionVar}, Country: ${countryVar}, IPAddress:${ipVar}`,
     )
     .openPopup();
+  myMap.setView([latitude, longitude], 13);
 }
 
 const myMap = new Map(mapAreaDiv as HTMLElement).setView(

@@ -44,9 +44,9 @@
       </div>
     </div>
   </header>
-  <main class="bg-transparent -mt-[20%] md:-mt-[3%] relative">
-    <section> <!-- section containing both the ip info and map-->
-      <section class="relative flex justify-center z-20">
+  <main class="bg-transparent md:-mt-[3%] relative">
+    <section class="relative"> <!-- section containing both the ip info and map-->
+      <section class="absolute inset-x-0 -top-20 md:-top-16 flex justify-center z-20">
         <div
           class="grid grid-rows-4 md:grid-cols-4 gap-0 bg-white min-w-xs md:w-full md:max-w-4xl md:h-40 rounded-2xl p-5 border-2 border-gray-200 text-center md:text-left">
           <div class="flex flex-col p-5">
@@ -74,7 +74,8 @@
           <!-- add offset value dynamically using the API -->
         </div>
       </section>
-      <div id="mapArea" class="w-full h-220 -mt-[57%] md:-mt-[8%] relative z-10">
+      <!-- <div id="mapArea" class="w-full h-220 -mt-[57%] md:-mt-[8%] relative z-10"> -->
+      <div id="mapArea" class="w-full h-220 relative z-10">
 
       </div>
     </section>
