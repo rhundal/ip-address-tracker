@@ -8,3 +8,9 @@
 
 - what works - search by domain or ip works, the map loads pointing to the location of the ip or domain.
 - what needs to be fixed - search field validation, accessibility support, bringing message bubble to the front (sometimes it hides behind the middle card), zoom +/- button not working if clicked on the map but the map zooms in and out by mouse.
+
+##### What I did to keep my key private
+
+- I made use of I used Node.js serverless functions on Vercel (middleman) to keep my API key private.
+
+##### [Link to my website](https://ip-address-tracker-one-psi.vercel.app/)
