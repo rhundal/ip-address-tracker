@@ -14,3 +14,9 @@
 - I made use of Node.js serverless functions on Vercel (middleman) to keep my API key private.
 
 ##### [Link to my website](https://ip-address-tracker-one-psi.vercel.app/)
+
+##### How to run my project
+
+- cd ip_address_tracker
+- npx tsc
+- right click index.html
